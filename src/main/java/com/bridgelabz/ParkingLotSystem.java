@@ -14,6 +14,7 @@ public class ParkingLotSystem {
     public ParkingLotSystem() {
         parkingLotInformationSubscriber = new ParkingLotInformationSubscriber();
     }
+
     //METHOD TO PARK THE VEHICLE
     public boolean isPark(Object vehicleToPark) throws ParkingLotException {
         if (this.vehicle.isEmpty()) {
