@@ -1,4 +1,5 @@
 package com.bridgelabz;
 
-public class IParkingLotInFormation {
+public interface IParkingLotInFormation {
+    void notifyParkingStatus(boolean status) throws ParkingLotException;
 }

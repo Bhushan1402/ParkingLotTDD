@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T08:45:54" hostname="SHREE" time="0.004">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T09:14:47" hostname="SHREE" time="0.103">
   <properties/>
-  <testcase name="givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities" classname="com.bridgelabz.ParkingLotTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities" classname="com.bridgelabz.ParkingLotTest" time="0.103"/>
+  <system-out><![CDATA[AIRPORT SECURITY:PARKING LOT IS FULL
+PARKING LOT OWNER:PARKING_LOT_IS_FULL
+AIRPORT SECURITY:PARKING LOT IS FULL
+PARKING LOT OWNER:PARKING_LOT_IS_FULL
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
