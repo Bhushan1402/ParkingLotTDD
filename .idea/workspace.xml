@@ -7,18 +7,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/AirportSecurity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/AirportSecurity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingOwner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/AirportSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/AirportSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="16" />
+    <option name="myElementSize" value="34" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -69,6 +74,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bridgelabz" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bridgelabz" />
     </key>
@@ -201,22 +209,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1322" height="140" key="GridCell.Tab.0.bottom" timestamp="1588696065916">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588707655619">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588696065916" />
-    <state width="1322" height="140" key="GridCell.Tab.0.center" timestamp="1588696065916">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1588707655619" />
+    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588707872212">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588696065916" />
-    <state width="1322" height="140" key="GridCell.Tab.0.left" timestamp="1588696065916">
+    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588707872212" />
+    <state width="1322" height="148" key="GridCell.Tab.0.bottom" timestamp="1588702732837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588696065916" />
-    <state width="1322" height="140" key="GridCell.Tab.0.right" timestamp="1588696065916">
+    <state width="1322" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588702732837" />
+    <state width="1322" height="148" key="GridCell.Tab.0.center" timestamp="1588702732806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="140" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588696065916" />
+    <state width="1322" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588702732806" />
+    <state width="1322" height="148" key="GridCell.Tab.0.left" timestamp="1588702732728">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588702732728" />
+    <state width="1322" height="148" key="GridCell.Tab.0.right" timestamp="1588702732821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588702732821" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1588659345213">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -233,12 +249,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588659345213" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1588682916150">
+    <state x="454" y="65" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588707646992">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588682916150" />
+    <state x="454" y="65" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1588707646992" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1588707076594">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1588707076594" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/untitled6$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1588678930436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/untitled6$ParkingLotTest.ic" NAME="ParkingLotTest Coverage Results" MODIFIED="1588696895066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

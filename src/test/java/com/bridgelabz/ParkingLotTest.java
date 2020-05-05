@@ -69,4 +69,20 @@ public class ParkingLotTest {
             Assert.assertEquals("Parking Lot Is Full",e.getMessage());
         }
     }
+
+    @Test
+    public void givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar() {
+        ParkingLotOwner parkingLotOwner = new ParkingLotOwner();
+        HashMap parkingLotMap = null;
+        Integer key = parkingLotOwner.generateParkingSlotNumber();
+        ParkingLotAttendant parkingLotAttendant = new ParkingLotAttendant();
+        Object vehicle = new Object();
+        boolean park;
+        try {
+            park = parkingLotAttendant.isPark(key, vehicle);
+            Assert.assertTrue(park);
+        } catch (ParkingLotSystemException e) {
+            e.printStackTrace();
+        }
+    }
 }
