@@ -12,7 +12,8 @@ public class ParkingOwner implements IParkingLotObserver {
         if (parkingLotStatus == true) {
             this.isParkingFull = parkingLotStatus;
             System.out.println("PARKING LOT OWNER:PARKING_LOT_IS_FULL");
-        }
-        parkingLotSystem.isParkingFull = false;
+        } else
+            System.out.println("PARKING LOT OWNER:PARKING_LOT_IS_AVAILABLE");
+            parkingLotSystem.isParkingFull = false;
     }
 }
