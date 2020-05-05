@@ -3,6 +3,8 @@ package com.bridgelabz;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 public class ParkingLotTest {
 
     ParkingLotSystem parkingLotSystem = new ParkingLotSystem();
@@ -72,7 +74,7 @@ public class ParkingLotTest {
 
     @Test
     public void givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar() {
-        ParkingLotOwner parkingLotOwner = new ParkingLotOwner();
+        ParkingOwner parkingLotOwner = new ParkingOwner();
         HashMap parkingLotMap = null;
         Integer key = parkingLotOwner.generateParkingSlotNumber();
         ParkingLotAttendant parkingLotAttendant = new ParkingLotAttendant();
