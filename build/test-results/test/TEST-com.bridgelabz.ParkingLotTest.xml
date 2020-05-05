@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T05:15:23" hostname="SHREE" time="0.004">
+  <properties/>
+  <testcase name="givenAVehicleToPArk_WhenParkedInParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
