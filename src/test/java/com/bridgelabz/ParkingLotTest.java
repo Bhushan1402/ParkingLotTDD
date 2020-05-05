@@ -83,7 +83,7 @@ public class ParkingLotTest {
         try {
             park = parkingLotAttendant.isPark(key, vehicle);
             Assert.assertTrue(park);
-        } catch (ParkingLotSystemException e) {
+        } catch (ParkingLotException e) {
             e.printStackTrace();
         }
     }
