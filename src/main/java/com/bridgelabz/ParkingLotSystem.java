@@ -7,6 +7,13 @@ public class ParkingLotSystem {
 
     List<Object> vehicle = new ArrayList<Object>();
     int parkingLotCapacity = 1;
+    public boolean isParkingFull;
+    ParkingLotInformationSubscriber parkingLotInformationSubscriber;
+
+    //CONSTRUCTOR
+    public ParkingLotSystem() {
+        parkingLotInformationSubscriber = new ParkingLotInformationSubscriber();
+    }
     //METHOD TO PARK THE VEHICLE
     public boolean isPark(Object vehicleToPark) throws ParkingLotException {
         if (this.vehicle.isEmpty()) {
