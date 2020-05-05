@@ -6,7 +6,7 @@ import java.util.List;
 public class ParkingLotSystem {
 
     List<Object> vehicle = new ArrayList<Object>();
-    int parkingLotCapacity = 1;
+    int parkingLotCapacity = 3;
     public boolean isParkingFull;
     ParkingLotInformationSubscriber parkingLotInformationSubscriber;
 

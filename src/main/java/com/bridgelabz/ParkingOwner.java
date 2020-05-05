@@ -1,8 +1,7 @@
 package com.bridgelabz;
 
-import java.util.HashMap;
-
 public class ParkingOwner implements IParkingLotObserver {
+
     //FIELDS
     boolean isParkingFull;
     ParkingLotSystem parkingLotSystem;
