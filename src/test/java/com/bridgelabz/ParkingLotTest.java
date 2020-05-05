@@ -42,7 +42,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void givenAVehicleToPark_WhenParkingLotIsFull_ShouldReturnException() {
+    public void givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities() {
         Object vehicleOne = new Object();
         Object vehicleTwo = new Object();
         Object vehicleThree = new Object();

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-05T06:16:31" hostname="SHREE" time="0.01">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T08:45:54" hostname="SHREE" time="0.004">
   <properties/>
-  <testcase name="givenAVehicleToPark_WhenParkingLotIsFull_ShouldReturnException" classname="com.bridgelabz.ParkingLotTest" time="0.006"/>
-  <testcase name="givenAVehicleToPark_WhenThereAreOtherVehicles_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
-  <testcase name="givenAVehicle_WhenUnParkedFromParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenNotPresentInParkingLot_ShouldReturnException" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
-  <testcase name="givenAVehicleToPArk_WhenParkedInParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
+  <testcase name="givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities" classname="com.bridgelabz.ParkingLotTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

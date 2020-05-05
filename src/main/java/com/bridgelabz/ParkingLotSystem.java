@@ -23,16 +23,18 @@ public class ParkingLotSystem {
         } else if (!this.vehicle.isEmpty() && (!this.vehicle.contains(vehicleToPark)) && (this.vehicle.size() < parkingLotCapacity)) {
             vehicle.add(vehicleToPark);
             return true;
-        } else
-            throw new ParkingLotException("Parking Lot Is Full");
+        } else isParkingFull = true;
+        parkingLotInformationSubscriber.notifyParkingStatus(true);
+        return true;
     }
 
     //METHOD TO UNPARK THE GIVEN VEHICLE
     public boolean unParkTheVehicle(Object vehicleToUnPark) throws ParkingLotException {
         if (vehicle.contains(vehicleToUnPark)) {
             vehicle.remove(vehicleToUnPark);
+            parkingLotInformationSubscriber.notifyParkingStatus(false);
             return true;
         }
-        throw new ParkingLotException("Vehicle Is Not Parked Here");
+        throw new ParkingLotException(ParkingLotException.ExceptionType.VEHICLE_NOT_PARK_HERE, "Vehicle Is Not Parked Here");
     }
 }
