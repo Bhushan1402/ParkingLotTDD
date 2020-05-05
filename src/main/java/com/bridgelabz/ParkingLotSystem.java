@@ -4,18 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingLotSystem {
-    public static void main(String[] args) {
-        System.out.println("Welcome To ParkingLot");
-    }
 
     List<Object> vehicle = new ArrayList<Object>();
-
+    int parkingLotCapacity = 1;
     //METHOD TO PARK THE VEHICLE
     public boolean isPark(Object vehicleToPark) throws ParkingLotException {
         if (this.vehicle.isEmpty()) {
             vehicle.add(vehicleToPark);
             return true;
-        } else if (!this.vehicle.isEmpty() && (!this.vehicle.contains(vehicleToPark)) && (this.vehicle.size() < 5)) {
+        } else if (!this.vehicle.isEmpty() && (!this.vehicle.contains(vehicleToPark)) && (this.vehicle.size() < parkingLotCapacity)) {
             vehicle.add(vehicleToPark);
             return true;
         } else
