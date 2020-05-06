@@ -158,4 +158,21 @@ public class ParkingLotTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenAVehicle_WhenDriverIsHandicap_ShouldParkVehicleAtNearestLotPosition() {
+        Vehicle vehicleOne = new Vehicle("1", Vehicle.DriverType.NORMAL);
+        Vehicle vehicleTwo = new Vehicle("2", Vehicle.DriverType.NORMAL);
+        Vehicle vehicleThree = new Vehicle("3", Vehicle.DriverType.HANDICAP);
+        try {
+            parkingLotSystem.park(vehicleOne);
+            parkingLotSystem.park(vehicleTwo);
+            parkingLotSystem.unPark(vehicleOne);
+            parkingLotSystem.park(vehicleThree);
+            String vehicle1Position = parkingLotSystem.getVehiclePosition(vehicleThree);
+            Assert.assertEquals("A1 1", vehicle1Position);
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
 }
