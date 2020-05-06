@@ -3,45 +3,66 @@ package com.bridgelabz;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ParkingLotSystem {
-
-    List<Object> vehicle = new ArrayList<Object>();
-    int parkingLotCapacity = 3;
-    public boolean isParkingFull;
-    ParkingLotInformationSubscriber parkingLotInformationSubscriber;
-    ParkingLotAttendant attendant = new ParkingLotAttendant();
-    HashMap<Integer, Object> lotMap;
+    int SIZE_OF_LOT;
+    ParkingLotManager parkingLotManager;
+    ParkingOwner parkingOwner;
+    AirportSecurity airportSecurity;
+    ParkingLotAttendant parkingLotAttendant;
+    Map<String, Vehicle> vehicleMap;
 
     //CONSTRUCTOR
+    public ParkingLotSystem(int SIZE_OF_LOT) {
+        this.SIZE_OF_LOT = SIZE_OF_LOT;
+        parkingLotManager = new ParkingLotManager();
+        parkingOwner = new ParkingOwner();
+        airportSecurity = new AirportSecurity();
+        parkingLotManager.addObserver(parkingOwner);
+        parkingLotManager.addObserver(airportSecurity);
+        parkingLotAttendant = new ParkingLotAttendant(this);
+        vehicleMap = new HashMap<>();
+    }
+
     public ParkingLotSystem() {
-        parkingLotInformationSubscriber = new ParkingLotInformationSubscriber();
     }
 
-    //METHOD TO PARK THE VEHICLE
-    public boolean isPark(Object vehicleToPark) throws ParkingLotException {
-        if (this.vehicle.isEmpty()) {
-            vehicle.add(vehicleToPark);
-            return true;
-        } else if (!this.vehicle.isEmpty() && (!this.vehicle.contains(vehicleToPark)) && (this.vehicle.size() < parkingLotCapacity)) {
-            vehicle.add(vehicleToPark);
-            return true;
-        } else isParkingFull = true;
-        parkingLotInformationSubscriber.notifyParkingStatus(true);
-        return true;
-    }
-
-    //METHOD TO UNPARK THE GIVEN VEHICLE
-    public boolean unParkTheVehicle(Object vehicleToUnPark) throws ParkingLotException {
-        if (vehicle.contains(vehicleToUnPark)) {
-            vehicle.remove(vehicleToUnPark);
-            parkingLotInformationSubscriber.notifyParkingStatus(false);
-            return true;
+    //METHOD TO PARK VEHICLE
+    public void park(Vehicle vehicle) throws ParkingLotException {
+        if (isLotFull()) {
+            parkingLotManager.notifyParkingStatus(true);
+            throw new ParkingLotException(ParkingLotException.ExceptionType.PARKING_LOT_IS_FULL, "Parking is full");
         }
-        throw new ParkingLotException(ParkingLotException.ExceptionType.VEHICLE_NOT_PARK_HERE, "Vehicle Is Not Parked Here");
+        parkingLotAttendant.parkVehicle(vehicle);
     }
 
+    //METHOD TO CHECK LOT IS FULL OR NOT
+    public boolean isLotFull() {
+        return vehicleMap.size() == SIZE_OF_LOT;
+    }
+
+    //METHOD TO UNPARK VEHICLE
+    public void unPark(Vehicle vehicle) throws ParkingLotException {
+        if (!isVehicleParked(vehicle)) {
+            throw new ParkingLotException(ParkingLotException.ExceptionType.NOT_PARKED_HERE, "NO vehicle");
+        }
+        parkingLotAttendant.unParkedVehicle(vehicle);
+        parkingLotManager.notifyParkingStatus(false);
+    }
+
+    //METHOD TO CHECK VEHICLE PARKED OR NOT
     public boolean isVehicleParked(Vehicle vehicle) {
-        return false;
+        return vehicleMap.containsValue(vehicle);
+    }
+
+    //METHOD TO CHECK VEHICLE UNPARKED
+    public boolean isVehicleUnPark(Vehicle vehicle) {
+        return !isVehicleParked(vehicle);
+    }
+
+    //METHOD TO GET VEHICLE POSITION
+    public String getVehiclePosition(Vehicle vehicle) {
+        return parkingLotAttendant.getVehiclePosition(vehicle);
     }
 }

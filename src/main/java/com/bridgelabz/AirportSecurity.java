@@ -6,9 +6,6 @@ public class AirportSecurity implements IParkingLotObserver{
 
     @Override
     public void updateParkingLotStatus(boolean parkingLotStatus) {
-        if (this.isParkingFull = parkingLotStatus) {
-            System.out.println("AIRPORT SECURITY:PARKING LOT IS FULL");
-        } else
-            System.out.println("AIRPORT SECURITY:PARKING LOT IS AVAILABLE");
+        this.isParkingFull = parkingLotStatus;
     }
 }
