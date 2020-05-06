@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T16:44:31" hostname="SHREE" time="0.012">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-05T20:10:13" hostname="SHREE" time="0.005">
   <properties/>
-  <testcase name="givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformOwnerAndSecurity" classname="com.bridgelabz.ParkingLotTest" time="0.012"/>
-  <system-out><![CDATA[AIRPORT SECURITY:PARKING LOT IS AVAILABLE
-PARKING LOT OWNER:PARKING_LOT_IS_AVAILABLE
-]]></system-out>
+  <testcase name="givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar" classname="com.bridgelabz.ParkingLotTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
