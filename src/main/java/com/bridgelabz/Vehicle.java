@@ -8,7 +8,7 @@ public class Vehicle {
     private String parkingDateAndTime;
     private String vehicleId;
 
-    public Vehicle(String vehicleId, DriverType driverType, VehicleSize vehicleSiz, VehicleColour vehicleColour) {
+    public Vehicle(String vehicleId, DriverType driverType, VehicleSize vehicleSize, VehicleColour vehicleColour) {
         parkingDateTime = new ParkingDateTime();
         this.vehicleId = vehicleId;
         parkingDateAndTime = parkingDateTime.getDateTime();
