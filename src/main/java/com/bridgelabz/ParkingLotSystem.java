@@ -66,6 +66,8 @@ public class ParkingLotSystem {
         return parkingLotAttendant.getVehiclePosition(vehicle);
     }
 
+
+    //METHOD TO GET NUMBER OF VEHICLES PARKED IN A PARKING LOT
     public int getNumberOfVehiclesParked(int parkingLotNumber) {
         return (int) vehicleMap.keySet().stream().filter(key -> key.contains("A" + parkingLotNumber)).count();
     }
