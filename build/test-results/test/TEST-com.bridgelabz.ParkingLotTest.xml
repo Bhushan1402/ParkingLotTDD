@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-05-06T18:10:51" hostname="SHREE" time="2.711">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-05-06T19:53:44" hostname="SHREE" time="0.466">
   <properties/>
-  <testcase name="givenAVehicle_WhenThereIsSpace1inParkingLot_ShouldAllowToPark" classname="com.bridgelabz.ParkingLotTest" time="2.33"/>
-  <testcase name="givenAVehicle_WhenAlreadyParkedInParkingLot_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.003"/>
-  <testcase name="givenAVehicleToPark_WhenParkedInParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenNoVehicleUnParked_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenUnParkedFromParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot" classname="com.bridgelabz.ParkingLotTest" time="0.002"/>
-  <testcase name="givenAVehicle_WhenToPark_ShouldReturnParkingDateTime" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenAlreadyParked_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.347"/>
-  <testcase name="givenAVehicle_WhenAskForPosition_ShouldReturnPosition" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenNotUnParked_ShouldReturnFalse" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenNotParkedInParkingLot_ShouldReturnFalse" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenAVehicle_WhenDriverIsHandicap_ShouldParkVehicleAtNearestLotPosition" classname="com.bridgelabz.ParkingLotTest" time="0.003"/>
+  <testcase name="givenAVehicle_WhenThereIsSpace1inParkingLot_ShouldAllowToPark" classname="com.bridgelabz.ParkingLotTest" time="0.1"/>
+  <testcase name="givenAVehicle_WhenAlreadyParkedInParkingLot_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.016"/>
+  <testcase name="givenAVehicleToPark_WhenParkedInParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.008"/>
+  <testcase name="givenAVehicle_WhenNoVehicleUnParked_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.012"/>
+  <testcase name="givenAVehicle_WhenUnParkedFromParkingLot_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.006"/>
+  <testcase name="givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot" classname="com.bridgelabz.ParkingLotTest" time="0.004"/>
+  <testcase name="givenAVehicle_WhenToPark_ShouldReturnParkingDateTime" classname="com.bridgelabz.ParkingLotTest" time="0.002"/>
+  <testcase name="givenAVehicle_WhenAlreadyParked_ShouldThrowException" classname="com.bridgelabz.ParkingLotTest" time="0.191"/>
+  <testcase name="givenVehicleOfLargeSize_WhenMaximumNumberOfParkingSlotAvailable_ShouldParkedInThatParkingLot" classname="com.bridgelabz.ParkingLotTest" time="0.016"/>
+  <testcase name="givenAVehicle_WhenAskForPosition_ShouldReturnPosition" classname="com.bridgelabz.ParkingLotTest" time="0.002"/>
+  <testcase name="givenAVehicle_WhenNotUnParked_ShouldReturnFalse" classname="com.bridgelabz.ParkingLotTest" time="0.002"/>
+  <testcase name="givenAVehicle_WhenNotParkedInParkingLot_ShouldReturnFalse" classname="com.bridgelabz.ParkingLotTest" time="0.005"/>
+  <testcase name="givenAVehicle_WhenDriverIsHandicap_ShouldParkVehicleAtNearestLotPosition" classname="com.bridgelabz.ParkingLotTest" time="0.018"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
