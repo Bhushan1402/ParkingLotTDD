@@ -232,4 +232,24 @@ public class ParkingLotTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenParkingLot_WhenNeedVehicleOfParticularModel_ShouldReturnVehiclesInformationToConcernParty() {
+        PoliceDepartment policeDepartment = new PoliceDepartment(parkingLotSystem);
+        Vehicle vehicleOne = new Vehicle("1", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL,
+                Vehicle.VehicleColour.BLUE, Vehicle.VehicleModel.BMW, "Roy");
+        Vehicle vehicleTwo = new Vehicle("2", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.LARGE,
+                Vehicle.VehicleColour.WHITE, Vehicle.VehicleModel.BMW, "Joy");
+        Vehicle vehicleThree = new Vehicle("3", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL,
+                Vehicle.VehicleColour.BLUE, Vehicle.VehicleModel.TOYOTA, "Roy");
+        try {
+            parkingLotSystem.park(vehicleOne);
+            parkingLotSystem.park(vehicleTwo);
+            parkingLotSystem.park(vehicleThree);
+            Map<String, Vehicle> vehiclesOfParticularModel = policeDepartment.getVehiclesOfModel(Vehicle.VehicleModel.BMW);
+            Assert.assertEquals(2, vehiclesOfParticularModel.size());
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
 }
