@@ -50,7 +50,7 @@ public class ParkingLotTest {
 
     @Test
     public void givenAVehicle_WhenNotParkedInParkingLot_ShouldReturnFalse() {
-        vehicle = new Vehicle("1", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL);
+        vehicle = new Vehicle("1", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL, Vehicle.VehicleColour.WHITE);
         boolean isPark = parkingLotSystem.isVehicleParked(vehicle);
         Assert.assertFalse(isPark);
     }
