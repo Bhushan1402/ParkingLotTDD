@@ -1,12 +1,11 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ParkingLotSystem {
-    int SIZE_OF_LOT;
+    int NUMBER_OF_PARKING_LOTS;
+    int SIZE_OF_PARKING_LOT;
     ParkingLotManager parkingLotManager;
     ParkingOwner parkingOwner;
     AirportSecurity airportSecurity;
@@ -14,8 +13,9 @@ public class ParkingLotSystem {
     Map<String, Vehicle> vehicleMap;
 
     //CONSTRUCTOR
-    public ParkingLotSystem(int SIZE_OF_LOT) {
-        this.SIZE_OF_LOT = SIZE_OF_LOT;
+    public ParkingLotSystem(int SIZE_OF_PARKING_LOT,int NUMBER_OF_PARKING_LOTS) {
+        this.SIZE_OF_PARKING_LOT = SIZE_OF_PARKING_LOT;
+        this.NUMBER_OF_PARKING_LOTS = NUMBER_OF_PARKING_LOTS;
         parkingLotManager = new ParkingLotManager();
         parkingOwner = new ParkingOwner();
         airportSecurity = new AirportSecurity();
@@ -39,7 +39,7 @@ public class ParkingLotSystem {
 
     //METHOD TO CHECK LOT IS FULL OR NOT
     public boolean isLotFull() {
-        return vehicleMap.size() == SIZE_OF_LOT;
+        return vehicleMap.size() == SIZE_OF_PARKING_LOT;
     }
 
     //METHOD TO UNPARK VEHICLE

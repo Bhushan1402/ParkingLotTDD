@@ -18,7 +18,7 @@ public class ParkingLotTest {
 
     @Before
     public void setUp() throws Exception {
-        parkingLotSystem = new ParkingLotSystem(2,3);
+        parkingLotSystem = new ParkingLotSystem(5,5);
         parkingLotOwner = new ParkingOwner();
         airportSecurity = new AirportSecurity();
     }
@@ -124,7 +124,7 @@ public class ParkingLotTest {
         try {
             parkingLotSystem.park(vehicle1);
             String vehiclePosition = parkingLotSystem.getVehiclePosition(vehicle1);
-            Assert.assertEquals("VH 01", vehiclePosition);
+            Assert.assertEquals("A1 1", vehiclePosition);
         } catch (ParkingLotException e) {
             e.printStackTrace();
         }
@@ -170,7 +170,25 @@ public class ParkingLotTest {
             parkingLotSystem.unPark(vehicleOne);
             parkingLotSystem.park(vehicleThree);
             String vehicle1Position = parkingLotSystem.getVehiclePosition(vehicleThree);
-            Assert.assertEquals("A1 1", vehicle1Position);
+            Assert.assertEquals("A3 1", vehicle1Position);
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenVehicleOfLargeSize_WhenMaximumNumberOfParkingSlotAvailable_ShouldParkedInThatParkingLot() {
+        Vehicle vehicleOne = new Vehicle("1", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL);
+        Vehicle vehicleTwo = new Vehicle("2", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL);
+        Vehicle vehicleThree = new Vehicle("3", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.SMALL);
+        Vehicle vehicleFour = new Vehicle("4", Vehicle.DriverType.NORMAL, Vehicle.VehicleSize.LARGE);
+        try {
+            parkingLotSystem.park(vehicleOne);
+            parkingLotSystem.park(vehicleTwo);
+            parkingLotSystem.park(vehicleThree);
+            parkingLotSystem.park(vehicleFour);
+            String vehicleFourPosition = parkingLotSystem.getVehiclePosition(vehicleFour);
+            Assert.assertEquals("A2 2", vehicleFourPosition);
         } catch (ParkingLotException e) {
             e.printStackTrace();
         }
