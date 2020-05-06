@@ -40,4 +40,8 @@ public class ParkingLotSystem {
         }
         throw new ParkingLotException(ParkingLotException.ExceptionType.VEHICLE_NOT_PARK_HERE, "Vehicle Is Not Parked Here");
     }
+
+    public boolean isVehicleParked(Vehicle vehicle) {
+        return false;
+    }
 }

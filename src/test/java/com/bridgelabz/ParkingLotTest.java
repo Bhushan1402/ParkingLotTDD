@@ -1,47 +1,72 @@
 package com.bridgelabz;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 public class ParkingLotTest {
 
-    ParkingLotSystem parkingLotSystem = new ParkingLotSystem();
+    ParkingLotSystem parkingLotSystem = null;
+    Vehicle vehicle = null;
+    ParkingOwner parkingLotOwner = null;
+    AirportSecurity airportSecurity = null;
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    Date date = new Date();
+
+    @Before
+    public void setUp() throws Exception {
+        parkingLotSystem = new ParkingLotSystem(3);
+        parkingLotOwner = new ParkingOwner();
+        airportSecurity = new AirportSecurity();
+    }
+
 
     @Test
     public void givenAVehicleToPArk_WhenParkedInParkingLot_ShouldReturnTrue() throws ParkingLotException {
-        Object vehicle = new Object();
-        boolean park = parkingLotSystem.isPark(vehicle);
-        Assert.assertTrue(park);
+        vehicle = new Vehicle("1");
+        parkingLotSystem.isPark(vehicle);
+        boolean isPark = parkingLotSystem.isVehicleParked(vehicle);
+        Assert.assertTrue(isPark);
     }
 
     @Test
     public void givenAVehicle_WhenUnParkedFromParkingLot_ShouldReturnTrue() throws ParkingLotException {
-        Object vehicle = new Object();
-        parkingLotSystem.isPark(vehicle);
-        boolean unPark = parkingLotSystem.unParkTheVehicle(vehicle);
-        Assert.assertTrue(unPark);
+        Vehicle vehicle1 = new Vehicle("1");
+        parkingLotSystem.park(vehicle1);
+        parkingLotSystem.unPark(vehicle1);
+        boolean isUnPark = parkingLotSystem.isVehicleUnPark(vehicle1);
+        Assert.assertTrue(isUnPark);
     }
 
     @Test
-    public void givenAVehicleToPark_WhenThereAreOtherVehicles_ShouldReturnTrue() throws ParkingLotException {
-        Object vehicleOne = new Object();
-        boolean park = parkingLotSystem.isPark(vehicleOne);
-        Assert.assertTrue(park);
-    }
-
-    @Test
-    public void givenAVehicle_WhenNotPresentInParkingLot_ShouldReturnException() {
-        Object vehicleOne = new Object();
-        Object vehicle = new Object();
+    public void givenAVehicle_WhenAlreadyParkedInParkingLot_ShouldThrowException() throws ParkingLotException {
+        parkingLotSystem = new ParkingLotSystem(2);
         try {
-            parkingLotSystem.isPark(vehicleOne);
-            parkingLotSystem.unParkTheVehicle(vehicle);
+            Object vehicleOne = new Object();
+            parkingLotSystem.park(new Vehicle("1"));
+            parkingLotSystem.park(new Vehicle("1"));
+            parkingLotSystem.park(new Vehicle("3"));
+            boolean park = parkingLotSystem.isPark(vehicleOne);
+            Assert.assertTrue(park);
         } catch (ParkingLotException e) {
-            Assert.assertEquals("Vehicle Is Not Parked Here",e.getMessage());
+            Assert.assertEquals(ParkingLotException.ExceptionType.PARKING_LOT_IS_FULL, e.type);
         }
     }
+
+    @Test
+    public void givenAVehicle_WhenNoVehicleUnParked_ShouldThrowException() {
+        try {
+
+            Vehicle vehicle1 = new Vehicle("2");
+            parkingLotSystem.park(vehicle1);
+            parkingLotSystem.isVehicleUnPark(vehicle1);
+        } catch (ParkingLotException e) {
+            Assert.assertEquals(ParkingLotException.ExceptionType.NOT_PARKED_HERE, e.type);
+        }
 
     @Test
     public void givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities() {
@@ -70,6 +95,13 @@ public class ParkingLotTest {
         }catch (ParkingLotException e){
             Assert.assertEquals("Parking Lot Is Full",e.getMessage());
         }
+    }
+
+    @Test
+    public void givenAVehicle_WhenNotParkedInParkingLot_ShouldReturnFalse() {
+        vehicle = new Vehicle("1");
+        boolean isPark = parkingLotSystem.isVehicleParked(vehicle);
+        Assert.assertFalse(isPark);
     }
 
     @Test

@@ -5,13 +5,13 @@ import java.util.HashMap;
 public class ParkingLotAttendant {
     ParkingLotSystem parkingLotSystem;
 
-    public ParkingAttendant(ParkingLotSystem parkingLotSystem) {
+    public ParkingLotAttendant(ParkingLotSystem parkingLotSystem) {
         this.parkingLotSystem = parkingLotSystem;
     }
 
-    public void parkVehicle(Vehicle vehicle) throws ParkingLotSystemException {
+    public void parkVehicle(Vehicle vehicle) throws ParkingLotException {
         if (parkingLotSystem.isVehicleParked(vehicle)) {
-            throw new ParkingLotSystemException(ParkingLotSystemException.ExceptionType.ALREADY_PARKED, "Vehicle is already parked");
+            throw new ParkingLotException(ParkingLotException.ExceptionType.ALREADY_PARKED, "Vehicle is already parked");
         }
         String key = "VH " + parkingLotSystem.vehicleMap.size() + 1;
         parkingLotSystem.vehicleMap.put(key, vehicle);
@@ -27,5 +27,4 @@ public class ParkingLotAttendant {
                 .findFirst()
                 .get();
     }
-}
 }
