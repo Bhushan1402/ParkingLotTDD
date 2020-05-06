@@ -21,6 +21,8 @@ public class Vehicle {
         this.driverType = driverType;
         this.vehicleSize = vehicleSize;
         this.vehicleColour = vehicleColour;
+        this.vehicleModel = vehicleModel;
+        this.attendantName = attendantName;
     }
 
     public String getVehicleId() {

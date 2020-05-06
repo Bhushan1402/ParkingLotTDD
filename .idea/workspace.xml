@@ -13,6 +13,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$DriverType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$DriverType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleColour.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleColour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle$VehicleSize.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/Vehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/ParkingLotTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" afterDir="false" />
@@ -20,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingDateTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/PoliceDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/PoliceDepartment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" afterDir="false" />
@@ -87,7 +90,7 @@
       <recent name="C:\Users\BHUSHAN\IdeaProjects\untitled6\src\main\java\com\bridgelabz" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest">
+  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingLot_WhenNeedInformationOfAllVehicles_ShouldReturnVehiclesList">
     <configuration name="ParkingLotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -108,12 +111,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformOwnerAndSecurity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLot_WhenNeedInformationOfAllVehicles_ShouldReturnVehiclesList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformOwnerAndSecurity&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_WhenNeedInformationOfAllVehicles_ShouldReturnVehiclesList&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -128,12 +131,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLot_WhenNeedVehicleOfParticularModel_ShouldReturnVehiclesInformationToConcernParty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_WhenNeedVehicleOfParticularModel_ShouldReturnVehiclesInformationToConcernParty&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -148,12 +151,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenAVehicle_WhenAskForPosition_ShouldReturnPosition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLot_WhenVehicleColorAndBrandMatch_ShouldReturnVehicleListWithColorBlueAndModelToyota" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenAVehicle_WhenAskForPosition_ShouldReturnPosition&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_WhenVehicleColorAndBrandMatch_ShouldReturnVehicleListWithColorBlueAndModelToyota&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -168,12 +171,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLot_WhenVehicleParkedInLastHalfHourMinutes_ShouldReturnVehiclesList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_WhenVehicleParkedInLastHalfHourMinutes_ShouldReturnVehiclesList&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -190,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_WhenNeedInformationOfAllVehicles_ShouldReturnVehiclesList" />
         <item itemvalue="Gradle.ParkingLotTest" />
-        <item itemvalue="Gradle.ParkingLotTest.givenAVehicle_WhenAskForPosition_ShouldReturnPosition" />
-        <item itemvalue="Gradle.ParkingLotTest.givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot" />
-        <item itemvalue="Gradle.ParkingLotTest.givenAVehicleToPark_WhenParkingLotOwnerGenerateNumber_AttendantShouldParkTheCar" />
-        <item itemvalue="Gradle.ParkingLotTest.givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformOwnerAndSecurity" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_WhenNeedVehicleOfParticularModel_ShouldReturnVehiclesInformationToConcernParty" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_WhenVehicleParkedInLastHalfHourMinutes_ShouldReturnVehiclesList" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_WhenVehicleColorAndBrandMatch_ShouldReturnVehicleListWithColorBlueAndModelToyota" />
       </list>
     </recent_temporary>
   </component>
@@ -220,22 +223,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1588760285801" />
-    <state width="1322" height="148" key="GridCell.Tab.0.bottom" timestamp="1588804751987">
+    <state width="1322" height="148" key="GridCell.Tab.0.bottom" timestamp="1588805692350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588804751987" />
-    <state width="1322" height="148" key="GridCell.Tab.0.center" timestamp="1588804751987">
+    <state width="1322" height="148" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588805692350" />
+    <state width="1322" height="148" key="GridCell.Tab.0.center" timestamp="1588805692350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588804751987" />
-    <state width="1322" height="148" key="GridCell.Tab.0.left" timestamp="1588804751987">
+    <state width="1322" height="148" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588805692350" />
+    <state width="1322" height="148" key="GridCell.Tab.0.left" timestamp="1588805692350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588804751987" />
-    <state width="1322" height="148" key="GridCell.Tab.0.right" timestamp="1588804751987">
+    <state width="1322" height="148" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588805692350" />
+    <state width="1322" height="148" key="GridCell.Tab.0.right" timestamp="1588805692350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588804751987" />
+    <state width="1322" height="148" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588805692350" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1588787771128">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
