@@ -41,4 +41,12 @@ public class PoliceDepartment {
         return vehicles = parkingLotSystem.vehicleMap.entrySet().stream()
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
+
+    public Map<String, Vehicle> getVehiclesByRow(Vehicle.DriverType driverType, Vehicle.VehicleSize vehicleSize, char parkingRow) {
+        return vehicles = parkingLotSystem.vehicleMap.entrySet().stream()
+                .filter(entry -> entry.getKey().contains("A" + parkingRow))
+                .filter(entry -> driverType.equals(entry.getValue().driverType))
+                .filter(entry -> vehicleSize.equals(entry.getValue().vehicleSize))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
 }
