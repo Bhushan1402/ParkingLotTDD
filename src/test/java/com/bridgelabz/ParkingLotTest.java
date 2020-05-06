@@ -174,7 +174,7 @@ public class ParkingLotTest {
             parkingLotSystem.unPark(vehicleOne);
             parkingLotSystem.park(vehicleThree);
             String vehicle1Position = parkingLotSystem.getVehiclePosition(vehicleThree);
-            Assert.assertEquals("3AB 1", vehicle1Position);
+            Assert.assertEquals("1AB 1", vehicle1Position);
         } catch (ParkingLotException e) {
             e.printStackTrace();
         }

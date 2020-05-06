@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-06T23:33:19" hostname="SHREE" time="0.104">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-05-06T23:42:24" hostname="SHREE" time="0.107">
   <properties/>
-  <testcase name="givenAVehicle_WhenParkingLotIsFull_ShouldAllowToPark" classname="com.bridgelabz.ParkingLotTest" time="0.104"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[com.bridgelabz.ParkingLotException: Parking is full
-	at com.bridgelabz.ParkingLotSystem.park(ParkingLotSystem.java:35)
-	at com.bridgelabz.ParkingLotTest.givenAVehicle_WhenParkingLotIsFull_ShouldAllowToPark(ParkingLotTest.java:345)
+  <testcase name="givenVehicleTypeAndVehicleSize_WhenVehicleTypeAndSizeMatch_ShouldReturnVehiclesListOnRowB" classname="com.bridgelabz.ParkingLotTest" time="0.107">
+    <failure message="java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;4&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;4&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at com.bridgelabz.ParkingLotTest.givenVehicleTypeAndVehicleSize_WhenVehicleTypeAndSizeMatch_ShouldReturnVehiclesListOnRowB(ParkingLotTest.java:318)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,5 +56,9 @@
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.lang.Thread.run(Thread.java:748)
-]]></system-err>
+</failure>
+  </testcase>
+  <system-out><![CDATA[{1AB 1=com.bridgelabz.Vehicle@2a6ed33e, 3AB 1=com.bridgelabz.Vehicle@2afeb064, 2AB 1=com.bridgelabz.Vehicle@44fdcf5, 4AB 1=com.bridgelabz.Vehicle@317164d0}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
