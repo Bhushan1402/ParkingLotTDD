@@ -271,7 +271,7 @@ public class ParkingLotTest {
             parkingLotSystem.park(vehicleThree);
             Map<String, Vehicle> vehiclesParkedInLastHalfHour = policeDepartment.getVehiclesParkedFromLastMinutes(30);
             Assert.assertEquals(3, vehiclesParkedInLastHalfHour.size());
-        } catch (ParkingLotSystemException e) {
+        } catch (ParkingLotException e) {
             e.printStackTrace();
         }
     }

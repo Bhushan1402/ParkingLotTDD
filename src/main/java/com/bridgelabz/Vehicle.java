@@ -1,14 +1,18 @@
 package com.bridgelabz;
 
+import java.time.LocalDateTime;
+
 public class Vehicle {
     String attendantName;
     VehicleColour vehicleColour;
     VehicleSize vehicleSize;
     DriverType driverType;
     ParkingDateTime parkingDateTime;
-    private String parkingDateAndTime;
-    private String vehicleId;
+
+    public String vehicleId;
     VehicleModel vehicleModel;
+    public LocalDateTime parkingDateAndTime;
+
 
     public Vehicle(String vehicleId, DriverType driverType, VehicleSize vehicleSize, VehicleColour vehicleColour,VehicleModel vehicleModel,String attendantName) {
         parkingDateTime = new ParkingDateTime();
@@ -17,10 +21,6 @@ public class Vehicle {
         this.driverType = driverType;
         this.vehicleSize = vehicleSize;
         this.vehicleColour = vehicleColour;
-    }
-
-    public String getParkingDateAndTime() {
-        return parkingDateAndTime;
     }
 
     public String getVehicleId() {

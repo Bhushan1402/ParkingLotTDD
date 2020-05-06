@@ -1,14 +1,17 @@
 package com.bridgelabz;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class ParkingDateTime {
-    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-    Date date = new Date();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+    LocalDateTime dateTime = LocalDateTime.now();
 
-    //METHOD TO DATE AND TIME
-    public String getDateTime() {
-        return formatter.format(date);
+    //METHOD TO GET DATE AND TIME
+    public LocalDateTime getDateTime() {
+        String date = formatter.format(dateTime);
+        return LocalDateTime.parse(date, formatter);
     }
 }

@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -27,6 +28,12 @@ public class PoliceDepartment {
     public Map<String, Vehicle> getVehiclesOfModel(Vehicle.VehicleModel vehicleModel) {
         return vehicles = parkingLotSystem.vehicleMap.entrySet().stream()
                 .filter(entry -> vehicleModel.equals(entry.getValue().vehicleModel))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
+    public Map<String, Vehicle> getVehiclesParkedFromLastMinutes(int minutes) {
+        return vehicles = parkingLotSystem.vehicleMap.entrySet().stream()
+                .filter(entry -> entry.getValue().parkingDateAndTime.getMinute() - LocalDateTime.now().getMinute() <= minutes)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 }
