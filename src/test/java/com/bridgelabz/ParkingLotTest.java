@@ -88,5 +88,41 @@ public class ParkingLotTest {
         }
     }
 
+    @Test
+    public void givenAVehicleToPark_WhenPassingSameKeyToUnParkToAttendant_ShouldUnParkTheVehicle() {
+        HashMap parkingLotMap = null;
+        ParkingOwner parkingLotOwner = new ParkingOwner();
+        ParkingLotAttendant parkingLotAttendant = new ParkingLotAttendant();
+        Integer key = parkingLotOwner.generateParkingSlotNumber();
+        Object vehicle = new Object();
+        boolean unPark;
+        boolean park;
+        try {
+            park = parkingLotAttendant.isPark(key, vehicle);
+            Assert.assertTrue(park);
+            unPark = parkingLotAttendant.unParkTheVehicle(key);
+            Assert.assertTrue(unPark);
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @Test
+    public void givenAVehicleToUnPark_WhenDriverCollectsTheKey_ShouldUnParkTheVehicle() {
+        ParkingOwner parkingLotOwner = new ParkingOwner();
+        ParkingLotAttendant parkingLotAttendant = new ParkingLotAttendant();
+        Driver driver = new Driver();
+        Integer key = parkingLotOwner.generateParkingSlotNumber();
+        Object vehicle = new Object();
+        boolean unPark;
+        boolean park;
+        try {
+            park = parkingLotAttendant.isPark(key, vehicle);
+            Assert.assertTrue(park);
+            unPark = driver.unParkTheVehicle(key);
+            Assert.assertTrue(unPark);
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
 }

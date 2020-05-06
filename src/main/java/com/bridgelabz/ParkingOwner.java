@@ -7,7 +7,7 @@ public class ParkingOwner implements IParkingLotObserver {
     //FIELDS
     boolean isParkingFull;
     ParkingLotSystem parkingLotSystem;
-    private HashMap<Integer, Object> parkingMap = new HashMap<Integer, Object>();
+    public HashMap<Integer, Object> parkingMap = new HashMap<Integer, Object>();
 
 
     @Override
