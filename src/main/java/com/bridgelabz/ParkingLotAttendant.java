@@ -17,9 +17,12 @@ public class ParkingLotAttendant {
         parkingLotSystem.vehicleMap.put(key, vehicle);
     }
 
-    public void unParkedVehicle(Vehicle vehicle) {
-        parkingLotSystem.vehicleMap.entrySet().removeIf(entry -> vehicle.equals(entry.getValue()));
-    }
+        public void unParkedVehicle(Vehicle vehicle) throws ParkingLotException, ParkingLotException {
+            if (parkingLotSystem.vehicleMap.containsValue(vehicle))
+                parkingLotSystem.vehicleMap.remove(getVehiclePosition(vehicle), vehicle);
+            else
+                throw new ParkingLotException(ParkingLotException.ExceptionType.NOT_PARKED_HERE, "VEHICLE_NOT_PARKED_HERE");
+        }
 
     public String getVehiclePosition(Vehicle vehicle) {
         return parkingLotSystem.vehicleMap.keySet().stream()
@@ -31,7 +34,7 @@ public class ParkingLotAttendant {
     public String getParkingPosition() {
         String position = null;
         while (lot++ <= parkingLotSystem.NUMBER_OF_PARKING_LOTS) {
-            for (int index = 1; index < parkingLotSystem.SIZE_OF_PARKING_LOT; index++) {
+            for (int index = 1; index <= parkingLotSystem.SIZE_OF_PARKING_LOT; index++) {
                 String key = "A".concat(lot + " " + index);
                 if (!parkingLotSystem.vehicleMap.containsKey(key)) {
                     position = key;
