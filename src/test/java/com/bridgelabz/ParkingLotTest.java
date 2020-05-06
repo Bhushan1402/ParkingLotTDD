@@ -18,7 +18,7 @@ public class ParkingLotTest {
 
     @Before
     public void setUp() throws Exception {
-        parkingLotSystem = new ParkingLotSystem(3);
+        parkingLotSystem = new ParkingLotSystem(3,3);
         parkingLotOwner = new ParkingOwner();
         airportSecurity = new AirportSecurity();
     }
@@ -37,7 +37,7 @@ public class ParkingLotTest {
 
     @Test
     public void givenAVehicle_WhenAlreadyParkedInParkingLot_ShouldThrowException() {
-        parkingLotSystem = new ParkingLotSystem(2);
+        parkingLotSystem = new ParkingLotSystem(3,3);
         try {
             parkingLotSystem.park(new Vehicle("1"));
             parkingLotSystem.park(new Vehicle("1"));
@@ -138,6 +138,22 @@ public class ParkingLotTest {
             String dateTime = formatter.format(date);
             String parkingDateAndTime = vehicle.getParkingDateAndTime();
             Assert.assertEquals(dateTime, parkingDateAndTime);
+        } catch (ParkingLotException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenAVehicles_WhenParkedInParkingLot_ShouldEvenlyDistributeInParkingLot() {
+        Vehicle vehicleOne = new Vehicle("1");
+        Vehicle vehicleTwo = new Vehicle("2");
+        try {
+            parkingLotSystem.park(vehicleOne);
+            parkingLotSystem.park(vehicleTwo);
+            String vehicle1Position = parkingLotSystem.getVehiclePosition(vehicleOne);
+            String vehicle2Position = parkingLotSystem.getVehiclePosition(vehicleTwo);
+            Assert.assertEquals("A1 1", vehicle1Position);
+            Assert.assertEquals("A2 1", vehicle2Position);
         } catch (ParkingLotException e) {
             e.printStackTrace();
         }
