@@ -27,6 +27,5 @@ public class Vehicle {
 
     public enum DriverType {HANDICAP, NORMAL}
     public enum VehicleSize {LARGE, SMALL}
-
     public enum VehicleColour {WHITE, BLUE}
 }
