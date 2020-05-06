@@ -3,42 +3,29 @@ package com.bridgelabz;
 import java.util.HashMap;
 
 public class ParkingLotAttendant {
-    ParkingOwner parkingOwner = new ParkingOwner();
-    public Integer PARKING_SLOT_SIZE = 5;
+    ParkingLotSystem parkingLotSystem;
 
-//    private Object vehicle;
-    private boolean isParkingFull;
-    public IParkingLotInFormation parkingLotInformationSubscriber;
-
-    public ParkingLotAttendant() {
-        Driver driver;
-        parkingLotInformationSubscriber = new ParkingLotInformationSubscriber();
+    public ParkingAttendant(ParkingLotSystem parkingLotSystem) {
+        this.parkingLotSystem = parkingLotSystem;
     }
 
-    public Integer getParkingSlot() {
-        return this.PARKING_SLOT_SIZE;
-    }
-
-    //METHOD TO PARK THE VEHICLE
-    public boolean isPark(Integer parkingSlotNumber, Object vehicleToPark) throws ParkingLotException {
-        if (parkingOwner.parkingMap.isEmpty()) {
-            parkingOwner.parkingMap.put(parkingSlotNumber, vehicleToPark);
-            return true;
-        } else if (!parkingOwner.parkingMap.isEmpty() && (!parkingOwner.parkingMap.containsKey(parkingSlotNumber)) && (parkingOwner.parkingMap.size() < getParkingSlot())) {
-            parkingOwner.parkingMap.put(parkingSlotNumber, vehicleToPark);
-            return true;
-        } else isParkingFull = true;
-        parkingLotInformationSubscriber.notifyParkingStatus(true);
-        return true;
-    }
-
-    //METHOD TO UNPARK THE GIVEN VEHICLE
-    public boolean unParkTheVehicle(Integer key) throws ParkingLotException {
-        if (parkingOwner.parkingMap.containsKey(key)) {
-            parkingOwner.parkingMap.remove(key);
-            parkingLotInformationSubscriber.notifyParkingStatus(false);
-            return true;
+    public void parkVehicle(Vehicle vehicle) throws ParkingLotSystemException {
+        if (parkingLotSystem.isVehicleParked(vehicle)) {
+            throw new ParkingLotSystemException(ParkingLotSystemException.ExceptionType.ALREADY_PARKED, "Vehicle is already parked");
         }
-        throw new ParkingLotException(ParkingLotException.ExceptionType.VEHICLE_NOT_PARK_HERE, "Vehicle Is Not Parked Here");
+        String key = "VH " + parkingLotSystem.vehicleMap.size() + 1;
+        parkingLotSystem.vehicleMap.put(key, vehicle);
     }
+
+    public void unParkedVehicle(Vehicle vehicle) {
+        parkingLotSystem.vehicleMap.entrySet().removeIf(entry -> vehicle.equals(entry.getValue()));
+    }
+
+    public String getVehiclePosition(Vehicle vehicle) {
+        return parkingLotSystem.vehicleMap.keySet().stream()
+                .filter(key -> vehicle.equals(parkingLotSystem.vehicleMap.get(key)))
+                .findFirst()
+                .get();
+    }
+}
 }
