@@ -67,18 +67,19 @@ public class ParkingLotTest {
         } catch (ParkingLotException e) {
             Assert.assertEquals(ParkingLotException.ExceptionType.NOT_PARKED_HERE, e.type);
         }
+    }
+
 
     @Test
-    public void givenAVehicleToPark_WhenParkingLotIsFull_ShouldInformAuthorities() {
-        Object vehicleOne = new Object();
-        Object vehicleTwo = new Object();
-        Object vehicleThree = new Object();
+    public void givenAVehicle_WhenNotUnParked_ShouldReturnFalse() {
+        Vehicle vehicle1 = new Vehicle("1");
+
         try {
-            parkingLotSystem.isPark(vehicleOne);
-            parkingLotSystem.isPark(vehicleTwo);
-            parkingLotSystem.isPark(vehicleThree);
+            parkingLotSystem.park(vehicle1);
+            boolean isUnPark = parkingLotSystem.isVehicleUnPark(vehicle1);
+            Assert.assertFalse(isUnPark);
         }catch (ParkingLotException e){
-            Assert.assertEquals("Parking Lot Is Full",e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -157,6 +158,4 @@ public class ParkingLotTest {
             e.printStackTrace();
         }
     }
-
-
 }
