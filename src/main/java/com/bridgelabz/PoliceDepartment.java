@@ -11,7 +11,7 @@ public class PoliceDepartment {
         this.parkingLotSystem = parkingLotSystem;
     }
 
-    public Map<String, Vehicle> getVehicles(Vehicle.VehicleColour white) {
+    public Map<String, Vehicle> getVehicles(Vehicle.VehicleColour colour) {
         return vehicles = parkingLotSystem.vehicleMap.entrySet().stream()
                 .filter(entry -> colour.equals(entry.getValue().vehicleColour))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
