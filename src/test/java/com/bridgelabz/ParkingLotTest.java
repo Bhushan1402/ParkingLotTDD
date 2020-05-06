@@ -225,8 +225,7 @@ public class ParkingLotTest {
             parkingLotSystem.park(vehicleOne);
             parkingLotSystem.park(vehicleTwo);
             parkingLotSystem.park(vehicleThree);
-            Map<String, Vehicle> vehiclesList = policeDepartment.getVehiclesWithColorAndModel(Vehicle.VehicleColour.BLUE,
-                    Vehicle.VehicleModel.TOYOTA);
+            Map<String, Vehicle> vehiclesList = policeDepartment.getVehiclesWithColorAndModel(Vehicle.VehicleColour.BLUE, Vehicle.VehicleModel.TOYOTA);
             Assert.assertEquals(1, vehiclesList.size());
         } catch (ParkingLotException e) {
             e.printStackTrace();
